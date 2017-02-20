@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 
-var Schema = new Schema({
+var userSchema = new Schema({
 	email: {
 		type: String,
 		unique: true, 
@@ -9,6 +10,6 @@ var Schema = new Schema({
 	password: String
 });
 
-var model = mongoose.model('user', userScema);
+var model = mongoose.model('user', userSchema);
 
 module.exports = model;

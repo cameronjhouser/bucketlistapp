@@ -6,13 +6,12 @@ var router = require('./router');
 var mongoose = require('mongoose');
 
 // DB CONNECTING
-mongoose.connect('mongodb://localhost:auth/mongotest');
+mongoose.connect('mongodb://localhost:bucket/mongoreact');
 
 app.use(bodyParser.json({ type: '*/*'}));
 router(app);
 
 var port = process.env.PORT || 3000;
-
 var server = http.createServer(app);
 
 server.listen(port);
