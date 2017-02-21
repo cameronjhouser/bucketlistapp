@@ -40,4 +40,9 @@ exports.signup = function(req, res, next){
 	 	res.json({ token: createUserToken(user)});
 	 });
 	}); 
+
+}
+
+exports.signin = function(req, res, next){
+	res.send({ token: createUserToken(req.user) });
 }
