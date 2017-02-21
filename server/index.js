@@ -15,4 +15,4 @@ var port = process.env.PORT || 3000;
 var server = http.createServer(app);
 
 server.listen(port);
-console.log('Server listening on ' + port);
+console.log('Server listening on ' + port + " foo!");
