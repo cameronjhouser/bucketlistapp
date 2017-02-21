@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-// import JSXIntro from './1_JSXIntro';
-// import ComponentsIntro from './2_ComponentsIntro';
+import JSXIntro from './1_JSXIntro';
+import ComponentsIntro from './2_ComponentsIntro';
 // import PropsIntro from './3_PropsIntro';
 // import StateIntro from './4_StateIntro';
 // import ChildComponentsIntro from './5_ChildComponentsIntro';
@@ -12,6 +12,7 @@ import React, { Component } from 'react';
 				<div>
 					<h1>React Intro</h1>
 					<JSXIntro />
+					<ComponentsIntro />
 				</div>
 				);
 		}
