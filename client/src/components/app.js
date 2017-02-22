@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
+import {Table} from 'react-bootstrap';
 import NavBarHeader from './Nav';
 import Video from './video/video';
-import BandList from './containers/BandList'
+import BandList from './containers/BandList';
+import IdeaList from './containers/IdeaList';
+
 
 	export default class App extends Component {
 		render() {
@@ -9,6 +12,7 @@ import BandList from './containers/BandList'
 				<div>
 					<NavBarHeader />
 					<BandList />
+					<IdeaList />
 				</div>
 				);
 		}
