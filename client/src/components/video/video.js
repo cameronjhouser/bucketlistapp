@@ -29,6 +29,7 @@ class Video extends Component {
 		return (
 			<div>
 				<SearchBar onSearchTermChange={videoSearch} />
+				<VideoDetail />
 			</div>
 			);
 	}

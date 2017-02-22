@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import NavBarHeader from './Nav';
 import Video from './video/video';
 import BandList from './containers/BandList';
+import Signin from './auth/signin';
 // import IdeaList from './containers/IdeaList';
 
 
@@ -11,7 +12,9 @@ import BandList from './containers/BandList';
 			return (
 				<div>
 					<NavBarHeader />
-					<BandList />
+					{this.props.children}
+					<Video />
+					
 				</div>
 				);
 		}
