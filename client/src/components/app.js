@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import {Table} from 'react-bootstrap';
+// import {Table} from 'react-bootstrap';
 import NavBarHeader from './Nav';
 import Video from './video/video';
 import BandList from './containers/BandList';
-import IdeaList from './containers/IdeaList';
+// import IdeaList from './containers/IdeaList';
 
 
 	export default class App extends Component {
@@ -12,7 +12,6 @@ import IdeaList from './containers/IdeaList';
 				<div>
 					<NavBarHeader />
 					<BandList />
-					<IdeaList />
 				</div>
 				);
 		}
