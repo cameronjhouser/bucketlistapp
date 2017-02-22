@@ -12,15 +12,16 @@ class Video extends Component {
 		super(props);
 		this.state = {
 			video: [],
-			selectVideo: null
+			selectedVideo: null
 		},
 		this.videoSearch('bucketlist');
 	}
 	videoSearch(term) {
 		YTSearch({key: API_KEY, term: term}, (videos) => {
+			console.log(videos);
 			this.setState({
 				videos: videos,
-				selectVideo: videos[0]
+				selectedVideo: videos[0]
 			});
 		});
 	}
@@ -29,7 +30,7 @@ class Video extends Component {
 		return (
 			<div>
 				<SearchBar onSearchTermChange={videoSearch} />
-				<VideoDetail />
+				<VideoDetail video={this.state.selectedVideo}/>
 			</div>
 			);
 	}
