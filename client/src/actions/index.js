@@ -1,8 +1,10 @@
 import axios from 'axios';
 
+// const ROOT_URL = 'http://rest.learncode.academy/api/cameronhouser'
+const ROOT_URL = 'http://localhost:3000';
 export const CREATE_POSTS = 'CREATE_POSTS';
 
-const ROOT_URL = 'http://rest.learncode.academy/api/cameronhouser'
+
 
 export function createPost(props) {
 	const request = axios.post(`${ROOT_URL}/post`, props);
@@ -10,6 +12,13 @@ export function createPost(props) {
 		type: CREATE_POSTS,
 		payload:request
 	};
+}
+
+export function signinUser({ email, password }){
+
+	return function(dispatch){
+			axios.post(`${ROOT_URL}/signin`, {email, password})
+	}
 }
 
 // Action Constant Names
