@@ -3,6 +3,7 @@ import BandsReducer from './reducer_bands';
 // import BucketListReducer from './reducer_bucketlist';
 import SelectedBand from './reducer_selectedband';
 import { reducer as formReducer } from 'redux-form';
+import ListItem from '../components/list/new-list-item';
 
 // import IdeaListReducer from './reducer_ideasList';
 
