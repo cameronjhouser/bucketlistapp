@@ -4,13 +4,17 @@ var bodyParser = require('body-parser');
 var app = express();
 var router = require('./router');
 var mongoose = require('mongoose');
+var cors = require('cors');
 
 // DB CONNECTING
-mongoose.connect('mongodb://localhost:bucket/mongoreact');
+mongoose.connect('mongodb://localhost:bucket/bucketlist');
 
+// middleware
+app.use(cors());
 app.use(bodyParser.json({ type: '*/*'}));
 router(app);
 
+// server
 var port = process.env.PORT || 3000;
 var server = http.createServer(app);
 

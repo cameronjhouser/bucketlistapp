@@ -3,14 +3,14 @@ export default function(){
 		{name: 'Run a marathon'},
 		{name: 'Create an application'},
 		{name: 'Cry a river'},
-		{name: 'Finish a Noval.....idea'},
+		{name: 'Finish a Novel.....idea'},
 		{catigory: 'Finish a .....idea'},
-		{catigory: 'Finish  Noval.....idea'},
-		{catigory: 'Finish a Noval.....'},
-		{catigory: 'Finish a Noval.....idea'},
-		{finishby: ' a Noval.....idea'},
-		{finishby: 'Finish a Noval.....idea'},
-		{finishby: 'Finish  Noval.....idea'},
+		{catigory: 'Finish  Novel.....idea'},
+		{catigory: 'Finish a Novel.....'},
+		{catigory: 'Finish a Novel.....idea'},
+		{finishby: ' a Novel.....idea'},
+		{finishby: 'Finish a Novel.....idea'},
+		{finishby: 'Finish  Novel.....idea'},
 		{finishby: 'Finish a .....idea'}
 	]
 }
