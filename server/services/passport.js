@@ -10,17 +10,17 @@ var LocalStrategy = require('passport-local');
 var localOptions = { usernameField: 'email'};
 
 var localLogin = new LocalStrategy(localOptions, function(email, password, done){
-
+	
 	User.findOne({email: email}, function(err, user){
 		if(err) { return(err, user); }
 		if(!user) {return done(null, false); }
 	
-	user.comparePassword(password, function(err, isMatch){
-		if(err) {return done(err); }
-		if(!isMatch) {return done(null, false);}
-			// if same it will call passport callback with user model
-		return done(null, user);
-	});
+		user.comparePassword(password, function(err, isMatch){
+			if(err) {return done(err); }
+			if(!isMatch) {return done(null, false);}
+				// if same it will call passport callback with user model
+			return done(null, user);
+		});
 	});
 });
 

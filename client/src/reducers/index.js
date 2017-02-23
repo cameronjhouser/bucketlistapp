@@ -1,15 +1,20 @@
 import { combineReducers } from 'redux';
-import BandsReducer from './reducer_bands';
-// import BucketListReducer from './reducer_bucketlist';
-import SelectedBand from './reducer_selectedband';
 import { reducer as formReducer } from 'redux-form';
-import ListItem from '../components/list/new-list-item';
+import authReducer from './auth_reducer';
+import {
+	AUTH_USER,
+	UNAUTH_USER
+} from '../actions/types';
+// import ListItem from '../components/list/new-list-item';
 
+// import SelectedBand from './reducer_selectedband';
+// import BandsReducer from './reducer_bands';
 // import IdeaListReducer from './reducer_ideasList';
-
+// import BucketListReducer from './reducer_bucketlist';
 
 	const rootReducer = combineReducers({
-		form: formReducer
+		form: formReducer,
+		auth: authReducer
 		// bands: BandsReducer,
 		// bucketlist: BucketListReducer,
 		// ideaList: IdeaListReducer,

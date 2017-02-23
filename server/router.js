@@ -1,5 +1,5 @@
 var Auth = require('./controllers/auth');
-// var User = require ('./models/user');
+var User = require ('./models/user');
 var passportService = require('./services/passport');
 var passport = require('passport');
 
@@ -12,8 +12,7 @@ module.exports = function(app){
 		res.send({message: 'hey'});
 	});
 
-	
-	app.post('/signup', Auth.signup);
 	app.post('/signin', requireSignin, Auth.signin);
+	app.post('/signup', Auth.signup);
 }
 
