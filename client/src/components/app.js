@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 // import {Table} from 'react-bootstrap';
 import NavBarHeader from './Nav';
 import Video from './video/video';
-import BandList from './containers/BandList';
-import Signin from './auth/signin';
+// import BandList from './containers/BandList';
+
+
 // import ListItem from './list/new-list-item';
 // import IdeaList from './containers/IdeaList';
 

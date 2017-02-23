@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { browserHistory } from 'react-router';
-import { AUTH_USER, UNAUTH_USER } from './types';
+import { AUTH_USER, UNAUTH_USER, AUTH_ERROR } from './types';
 import authReducer from '../reducers/auth_reducer';
 
 export const CREATE_POSTS = 'CREATE_POSTS';
@@ -18,11 +18,17 @@ export function signinUser({ email, password }){
 			localStorage.setItem('token', response.data.token);
 			browserHistory.push('/newitem');
 		})
-		.catch(() => {
-
-		});
+		.catch(response => dispatch(authError("Bad login info"))); 
 	}
 }
+
+export function authError(error) {
+	return {
+		type: AUTH_ERROR,
+		payload: error
+	};
+}
+
 export function createPost(props) {
 	const request = axios.post(`${ROOT_URL}/post`, props);
 	return {
@@ -32,26 +38,3 @@ export function createPost(props) {
 }
 
 
-
-// Action Constant Names
-// const SELECT_BAND = 'SELECT_BAND';
-// export function selectBand(band) {
-// 	console.log("You have selected:", band.name);
-// 	return{
-// 	type: SELECT_BAND,
-// 	payload:band
-// 	};
-// }
-
-//This is our action
-// const ADD_BAND = 'ADD_BAND';
-// {
-// 	type: ADD_BAND,
-// 	payload:band
-// }
-
-// const DELETE_BAND = 'DELETE_BAND'
-// {
-// 	type: DELETE_BAND,
-// 	payload:band
-// }
