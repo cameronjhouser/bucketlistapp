@@ -5,7 +5,7 @@ import Video from './video/video';
 // import BandList from './containers/BandList';
 
 
-// import ListItem from './list/new-list-item';
+import ListItem from './list/new-list-item';
 // import IdeaList from './containers/IdeaList';
 
 
@@ -14,9 +14,9 @@ import Video from './video/video';
 			return (
 				<div>
 					<NavBarHeader />
-					{this.props.children}
 					<Video />
-
+					{this.props.children}
+					<ListItem />
 				</div>
 				);
 		}
