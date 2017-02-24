@@ -3,10 +3,10 @@ var BucketList = require('../models/bucketlist.js');
 exports.addBucketList = function(req, res, next){
 	// For postman use
 	// var title = req.body.title
-	var title = req.body.title;
-	var topic = req.body.topic;
-	var url = req.body.url;
-	var content = req.body.content;
+	var title = req.body.props.title;
+	var topic = req.body.props.topic;
+	var url = req.body.props.url;
+	var content = req.body.props.content;
 	var specificUser = req.user;
 
 	var bucketList = new BucketList({

@@ -7,13 +7,13 @@ import { Link } from 'react-router';
 class NavBarHeader extends Component {
   renderLinks(){
     if(this.props.authenticated){
-      return [<NavItem href="/signout">Sign Out</NavItem>,
-               <NavDropdown eventkey={3} title="Cool Stuff" id="basic-nav-dropdown">
-                <MenuItem eventkey={3.1}>Action</MenuItem>
-                <MenuItem eventkey={3.2}>Another action</MenuItem>
-                <MenuItem eventkey={3.3}>Something else here</MenuItem>
+      return [<NavItem key={2.1} href="/signout">Sign Out</NavItem>,
+               <NavDropdown key={3} title="Cool Stuff" id="basic-nav-dropdown">
+                <MenuItem key={3.1}>Action</MenuItem>
+                <MenuItem key={3.2}>Another action</MenuItem>
+                <MenuItem key={3.3}>Something else here</MenuItem>
                 <MenuItem divider />
-                <MenuItem eventkey={3.4}>Separated link</MenuItem>
+                <MenuItem key={3.4}>Separated link</MenuItem>
               </NavDropdown>];
     }else{
       return [
